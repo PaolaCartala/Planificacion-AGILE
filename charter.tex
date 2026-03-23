@@ -181,7 +181,7 @@ Para el desarrollo del presente proyecto se supone que:
 \section{6. Product backlog}
 \label{sec:backlog}
 
-El Product Backlog se ha organizado en cuatro épicas fundamentales, las cuales agrupan las funcionalidades clave del sistema multi-agente. La ponderación de las Historias de Usuario (HU) se realizó utilizando \textit{Story Points} (SP) basados en la serie de Fibonacci (1, 2, 3, 5, 8, 13). El criterio para el cálculo de los SP considera la suma de tres factores: dificultad temporal, complejidad técnica e incertidumbre (experiencia previa requerida para la tarea).
+El Product Backlog se ha organizado en cuatro épicas fundamentales que agrupan las funcionalidades clave del sistema multi-agente. La ponderación de las Historias de Usuario (HU) se realizó utilizando \textit{Story Points} (SP) basados en la serie de Fibonacci (1, 2, 3, 5, 8, 13). El criterio para el cálculo de los SP considera la suma de tres factores: dificultad temporal, complejidad técnica e incertidumbre (experiencia previa requerida para la tarea).
 
 \begin{itemize}
   \item \textbf{\'{E}pica 1: generación y gestión de datos sintéticos}
@@ -263,7 +263,7 @@ Los siguientes criterios establecen las condiciones medibles y verificables que 
 Al tratarse de un proyecto intensivo en datos e inteligencia artificial, la planificación del ciclo de vida se basa en la metodología CRISP-DM adaptada a enfoques ágiles:
 
 \begin{enumerate}
-  \item \textbf{Comprensión del negocio:} reducir la carga administrativa y de cumplimiento normativo de los asesores financieros garantizando confidencialidad mediante arquitectura \textit{Zero-Trust}. La métrica de éxito esperada es la automatización exitosa de tareas operativas que normalmente toman horas, reduciéndolas a segundos.
+  \item \textbf{Comprensión del negocio:} reducir la carga administrativa y de cumplimiento normativo de los asesores financieros para garantizar la confidencialidad mediante arquitectura \textit{Zero-Trust}. La métrica de éxito esperada es la automatización exitosa de tareas operativas que normalmente toman horas, para reducirlas a segundos.
   \item \textbf{Comprensión de los datos:} se trabajarán tres fuentes de datos sintéticos generados ad-hoc. Datos tabulares estructurados (perfiles de clientes), datos financieros (CSV de portafolios) y datos no estructurados de tipo texto (cientos de documentos de transcripciones de reuniones).
   \item \textbf{Preparación de los datos:} incluirá la limpieza de texto, normalización de formatos numéricos y, críticamente, la fragmentación (\textit{chunking}) de los documentos de texto para la generación de incrustaciones (\textit{embeddings}) vectoriales.
   \item \textbf{Modelado:} el problema se enfoca en tareas de Procesamiento de Lenguaje Natural (NLP) y Generación Aumentada por Recuperación (RAG). Se emplearán modelos fundacionales de pesos abiertos (de 8B a 20B parámetros) ejecutados localmente y orquestados mediante \textit{frameworks} de agentes (como PydanticAI).

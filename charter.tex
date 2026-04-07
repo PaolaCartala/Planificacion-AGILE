@@ -54,12 +54,9 @@
 \rowcolor[HTML]{C0C0C0} 
 Revisión & \multicolumn{1}{c|}{\cellcolor[HTML]{C0C0C0}Detalles de los cambios realizados} & Fecha      \\ \hline
 0      & Creación del documento                                 &\fechaInicioName \\ \hline
-1      & Se completa hasta el punto 5 inclusive                 & 23 de marzo de 2026 \\ \hline
-%2      & Se completa hasta el punto 9 inclusive
-%		  Se puede agregar algo más \newline
-%		  En distintas líneas \newline
-%		  Así                                                   & {día} de {mes} de 202X \\ \hline
-%3      & Se completa hasta el punto 12 inclusive                & {día} de {mes} de 202X \\ \hline
+1      & Se completa hasta el punto 5 inclusive                 & 15 de marzo de 2026 \\ \hline
+2      & Se completa hasta el punto 9 inclusive                 & 23 de marzo de 2026 \\ \hline
+3      & Se completa hasta el punto 12 inclusive                & 7 de abril de 2026 \\ \hline
 %4      & Se completa el plan	                                 & {día} de {mes} de 202X \\ \hline
 
 % Si hay más correcciones pasada la versión 4 también se deben especificar acá
@@ -78,7 +75,7 @@ Buenos Aires, \fechaInicioName
 
 \vspace{2cm}
 
-Por medio de la presente se acuerda con \authorname\hspace{1px} que su Trabajo Final de la \degreename\hspace{1px} se titulará ``\ttitle'' y consistirá en el desarrollo de un asistente virtual financiero seguro mediante una arquitectura multi-agente, modelos de lenguaje locales (\textit{open-weights}) y generación aumentada por recuperación (RAG). El trabajo tendrá un presupuesto preliminar estimado de 600 horas y un costo estimado de \$ 0 (al utilizar herramientas de código abierto e infraestructura computacional propia), con fecha de inicio el \fechaInicioName\hspace{1px} y fecha de presentación pública el \fechaFinalName.
+Por medio de la presente se acuerda con \authorname\hspace{1px} que su Trabajo Final de la \degreename\hspace{1px} se titulará ``\ttitle'' y consistirá en el desarrollo de un asistente virtual financiero seguro mediante una arquitectura multi-agente, modelos de lenguaje locales (open-weights) y generación aumentada por recuperación (RAG). El trabajo tendrá un presupuesto preliminar estimado de 600 horas y un costo estimado de \$ 0 (al utilizar herramientas de código abierto e infraestructura computacional propia), con fecha de inicio el \fechaInicioName\hspace{1px} y fecha de presentación pública el \fechaFinalName.
 
 Se adjunta a esta acta la planificación inicial.
 
@@ -99,11 +96,11 @@ Se adjunta a esta acta la planificación inicial.
 \section{1. Descripción técnica-conceptual del proyecto a realizar}
 \label{sec:descripcion}
 
-En la industria de la gestión patrimonial (\textit{wealth management}), los asesores financieros invierten una cantidad desproporcionada de su tiempo en tareas administrativas y de cumplimiento normativo, tales como la transcripción de reuniones, el análisis de métricas de portafolios y la redacción de reportes. Si bien la adopción actual de herramientas de Inteligencia Artificial (IA) generativa pública ofrece una vía para automatizar estas tareas, su uso presenta un riesgo crítico en este sector. El estado del arte obliga a las instituciones a elegir entre la eficiencia de la IA centralizada y la estricta privacidad de los datos, ya que enviar información de identificación personal (PII) o datos financieros a servidores de terceros viola las estrictas normativas de confidencialidad y regulaciones financieras (como las de la SEC). 
+En la industria de la gestión patrimonial (wealth management), los asesores financieros invierten una cantidad desproporcionada de su tiempo en tareas administrativas y de cumplimiento normativo, tales como la transcripción de reuniones, el análisis de métricas de portafolios y la redacción de reportes. Si bien la adopción actual de herramientas de Inteligencia Artificial (IA) generativa pública ofrece una vía para automatizar estas tareas, su uso presenta un riesgo crítico en este sector. El estado del arte obliga a las instituciones a elegir entre la eficiencia de la IA centralizada y la estricta privacidad de los datos, ya que enviar información de identificación personal (PII) o datos financieros a servidores de terceros viola las estrictas normativas de confidencialidad y regulaciones financieras (como las de la SEC). 
 
-Para abordar esta problemática, el presente proyecto, desarrollado como un emprendimiento personal enfocado en el sector \textit{Fintech}, propone el desarrollo de un asistente virtual financiero basado en una arquitectura segura. La solución consiste en un sistema orquestado por múltiples agentes inteligentes que utilizan Modelos Fundacionales ejecutados en hardware local (\textit{Edge AI} o servidores \textit{on-premise}). El sistema integra procesamiento de lenguaje natural (NLP) para estructurar notas de reuniones y análisis automatizado de portafolios de inversión. Todo esto se unifica mediante una interfaz conversacional impulsada por un motor de Generación Aumentada por Recuperación (RAG), que permite realizar consultas cruzadas sobre el historial de clientes sin que un solo dato salga de la infraestructura local.
+Para abordar esta problemática, el presente proyecto, desarrollado como un emprendimiento personal enfocado en el sector Fintech, propone el desarrollo de un asistente virtual financiero basado en una arquitectura segura. La solución consiste en un sistema orquestado por múltiples agentes inteligentes que utilizan Modelos Fundacionales ejecutados en hardware local (Edge AI o servidores on-premise). El sistema integra procesamiento de lenguaje natural (NLP) para estructurar notas de reuniones y análisis automatizado de portafolios de inversión. Todo esto se unifica mediante una interfaz conversacional impulsada por un motor de Generación Aumentada por Recuperación (RAG), que permite realizar consultas cruzadas sobre el historial de clientes sin que un solo dato salga de la infraestructura local.
 
-La propuesta de valor radica en ofrecer la máxima eficiencia operativa bajo un paradigma de ``Confianza Cero'' (\textit{Zero-Trust}). Lo que distingue a este proyecto de otras soluciones comerciales SaaS es la garantía absoluta de privacidad de los datos mediante el uso de modelos de lenguaje de pesos abiertos (\textit{open-weights}), sumado a una trazabilidad completa de las decisiones algorítmicas mediante herramientas determinísticas (\textit{Tool Calling}).
+La propuesta de valor radica en ofrecer la máxima eficiencia operativa bajo un paradigma de ``Confianza Cero'' (Zero-Trust). Lo que distingue a este proyecto de otras soluciones comerciales SaaS es la garantía absoluta de privacidad de los datos mediante el uso de modelos de lenguaje de pesos abiertos (open-weights), sumado a una trazabilidad completa de las decisiones algorítmicas mediante herramientas determinísticas (Tool Calling).
 
 En la figura \ref{fig:diagBloques} se presenta el diagrama en bloques del sistema. Se observa que la arquitectura se divide en cuatro capas principales. En la parte superior, la capa de cliente captura las interacciones. Estas se derivan a una capa de servicios asíncrona basada en colas (SQLite) que previene el bloqueo del servidor. Posteriormente, la capa de inteligencia artificial, comandada por un Agente Enrutador, deriva las tareas a sub-agentes especializados que se comunican con el motor de inferencia local. Finalmente, la capa inferior gestiona el almacenamiento estructurado (SQL) y el conocimiento semántico (Vector DB).
 
@@ -133,7 +130,7 @@ Orientador    & \supname	      & \pertesupname 	& Director del Trabajo Final \\ 
 A continuación, se detallan las principales características y expectativas de cada uno de los interesados en el proyecto:
 
 \begin{itemize}
-    \item \textbf{Cliente (\clientename):} es un sector altamente regulado y riguroso. Valora por sobre todo la privacidad de los datos (arquitectura \textit{Zero-Trust}) y el cumplimiento normativo (regulaciones de la SEC). Su principal expectativa es que el sistema reduzca drásticamente el tiempo invertido en tareas administrativas sin sacrificar la seguridad de la información confidencial de sus propios clientes.
+    \item \textbf{Cliente (\clientename):} es un sector altamente regulado y riguroso. Valora por sobre todo la privacidad de los datos (arquitectura Zero-Trust) y el cumplimiento normativo (regulaciones de la SEC). Su principal expectativa es que el sistema reduzca drásticamente el tiempo invertido en tareas administrativas sin sacrificar la seguridad de la información confidencial de sus propios clientes.
     
     \item \textbf{Responsable (\authorname):} es la encargada de la investigación, el diseño de la arquitectura y el desarrollo integral del código (orquestación de agentes, configuración del motor RAG y bases de datos). Dado que este proyecto se realiza en paralelo con otras actividades profesionales, el desarrollo se planificará con una dedicación parcial estructurada y tendrá un enfoque de avance iterativo e incremental.
     
@@ -151,9 +148,9 @@ Automatizar y asegurar el procesamiento de información confidencial en el ámbi
 El proyecto incluye:
 \begin{itemize}
     \item Desarrollo de un orquestador multi-agente (agente enrutador, agente conversacional, agente de análisis de portafolios y agente de procesamiento de notas).
-    \item Integración de modelos de lenguaje de pesos abiertos (\textit{open-weights}) ejecutados de forma local para garantizar la privacidad.
+    \item Integración de modelos de lenguaje de pesos abiertos (open-weights) ejecutados de forma local para garantizar la privacidad.
     \item Implementación de un motor de Generación Aumentada por Recuperación (RAG) conectado a una base de datos vectorial para el historial de reuniones.
-    \item Creación de un \textit{dataset} sintético paramétrico con perfiles de clientes, portafolios y transcripciones de reuniones para la validación del sistema.
+    \item Creación de un dataset sintético paramétrico con perfiles de clientes, portafolios y transcripciones de reuniones para la validación del sistema.
     \item Diseño de una arquitectura de servicios asíncrona basada en colas de tareas con base de datos SQLite.
 \end{itemize}
 
@@ -171,38 +168,42 @@ Para el desarrollo del presente proyecto se supone que:
 
 \begin{itemize}
     \item Se dispondrá de acceso a hardware con capacidad de cómputo y memoria VRAM suficiente (tarjetas gráficas dedicadas o servicios en la nube temporal) para la inferencia local de modelos de lenguaje de entre 8B y 20B parámetros con tiempos de respuesta aceptables.
-    \item Será factible desarrollar un \textit{pipeline} procedural capaz de generar un \textit{dataset} sintético representativo (que incluya perfiles de clientes, portafolios y transcripciones de reuniones) que permita entrenar y validar el sistema sin infringir normativas de confidencialidad.
-    \item Los \textit{frameworks} de orquestación multi-agente de código abierto seleccionados (como PydanticAI o LangChain) mantendrán soporte y estabilidad durante el ciclo de vida del desarrollo.
+    \item Será factible desarrollar un pipeline procedural capaz de generar un dataset sintético representativo (que incluya perfiles de clientes, portafolios y transcripciones de reuniones) que permita entrenar y validar el sistema sin infringir normativas de confidencialidad.
+    \item Los frameworks de orquestación multi-agente de código abierto seleccionados (como PydanticAI o LangChain) mantendrán soporte y estabilidad durante el ciclo de vida del desarrollo.
     \item La arquitectura asíncrona propuesta mediante colas de trabajo en SQLite será suficiente para gestionar la concurrencia esperada en un entorno de prototipo, sin requerir la implementación inicial de gestores de colas más complejos (como Celery o RabbitMQ).
     \item Se contará con la disponibilidad periódica del experto del dominio (cliente) para la validación cualitativa de las respuestas generadas por los agentes y la verificación del cumplimiento de las reglas de negocio financieras.
-    \item El modelo de incrustación (\textit{embeddings}) seleccionado para la base de datos vectorial logrará una precisión semántica suficiente para que el motor RAG recupere el contexto relevante sin inducir alucinaciones críticas en las respuestas.
+    \item El modelo de incrustación (embeddings) seleccionado para la base de datos vectorial logrará una precisión semántica suficiente para que el motor RAG recupere el contexto relevante sin inducir alucinaciones críticas en las respuestas.
 \end{itemize}
 
 \section{6. Product backlog}
 \label{sec:backlog}
 
-El Product Backlog se ha organizado en cuatro épicas fundamentales que agrupan las funcionalidades clave del sistema multi-agente. La ponderación de las Historias de Usuario (HU) se realizó utilizando \textit{Story Points} (SP) basados en la serie de Fibonacci (1, 2, 3, 5, 8, 13). El criterio para el cálculo de los SP considera la suma de tres factores: dificultad temporal, complejidad técnica e incertidumbre (experiencia previa requerida para la tarea).
+El Product Backlog se ha organizado en cuatro épicas fundamentales que agrupan las funcionalidades clave del sistema multi-agente. 
+
+La ponderación de las historias de usuario se realizó utilizando Story Points (SP) basados en la serie de Fibonacci (1, 2, 3, 5, 8, 13). El criterio para el cálculo de los SP consiste en asignar un valor del 1 al 5 a tres variables independientes: dificultad temporal (tiempo estimado de implementación), complejidad técnica (cantidad de dependencias del código) e incertidumbre (nivel de experiencia previa requerida). La suma aritmética de estas tres variables se aproxima al número superior más cercano dentro de la sucesión de Fibonacci para obtener el valor final asignado a la historia.
+
+Las épicas y sus respectivas historias, incluyendo la justificación de sus prioridades, se detallan a continuación:
 
 \begin{itemize}
   \item \textbf{\'{E}pica 1: generación y gestión de datos sintéticos}
     \begin{itemize}
-      \item HU1: como desarrollador, quiero generar un \textit{dataset} sintético de clientes y portafolios para entrenar y validar el sistema sin comprometer datos reales confidenciales. (Prioridad: Alta, 5 SP).
-      \item HU2: como desarrollador, quiero simular transcripciones de reuniones financieras con diferentes niveles de complejidad técnica para probar la robustez del agente de procesamiento de notas. (Prioridad: Alta, 3 SP).
+      \item HU1: como desarrollador, quiero generar un dataset sintético de clientes y portafolios para entrenar y validar el sistema sin comprometer datos reales confidenciales. Prioridad alta, ya que sin datos de prueba estructurados no es posible construir ni validar el resto de los módulos del sistema. 5 SP.
+      \item HU2: como desarrollador, quiero simular transcripciones de reuniones financieras con diferentes niveles de complejidad técnica para probar la robustez del agente de procesamiento de notas. Prioridad alta, porque representa la entrada de datos fundamental para iniciar el flujo de procesamiento de lenguaje natural. 3 SP.
     \end{itemize}
   \item \textbf{\'{E}pica 2: procesamiento y análisis de notas de reuniones}
     \begin{itemize}
-      \item HU3: como asesor financiero, quiero subir transcripciones de reuniones al sistema para que el agente extraiga automáticamente los puntos clave, entidades y recomendaciones. (Prioridad: Alta, 8 SP).
-      \item HU4: como oficial de cumplimiento, quiero que el sistema analice las notas de las reuniones y aplique verificaciones normativas predefinidas para identificar posibles riesgos regulatorios. (Prioridad: Media, 5 SP).
+      \item HU3: como asesor financiero, quiero subir transcripciones de reuniones al sistema para que el agente extraiga automáticamente los puntos clave, entidades y recomendaciones. Prioridad alta, pues constituye el núcleo de la asistencia automatizada para reducir la carga administrativa. 8 SP.
+      \item HU4: como oficial de cumplimiento, quiero que el sistema analice las notas de las reuniones y aplique verificaciones normativas predefinidas para identificar posibles riesgos regulatorios. Prioridad media, porque aporta un gran valor de auditoría pero el sistema conversacional puede funcionar en su primera iteración sin estas reglas activadas. 5 SP.
     \end{itemize}
   \item \textbf{\'{E}pica 3: análisis automatizado de portafolios}
     \begin{itemize}
-      \item HU5: como asesor financiero, quiero cargar datos tabulares de un portafolio de inversión para obtener un reporte automatizado de métricas de riesgo y alocación de activos. (Prioridad: Alta, 8 SP).
-      \item HU6: como asesor financiero, quiero que el agente compare el rendimiento del portafolio actual con índices de referencia (\textit{benchmarks}) para fundamentar mis estrategias de inversión. (Prioridad: Media, 5 SP).
+      \item HU5: como asesor financiero, quiero cargar datos tabulares de un portafolio de inversión para obtener un reporte automatizado de métricas de riesgo y alocación de activos. Prioridad alta, ya que conforma la funcionalidad central y bloqueante del módulo de inversiones. 8 SP.
+      \item HU6: como asesor financiero, quiero que el agente compare el rendimiento del portafolio actual con benchmarks para fundamentar mis estrategias de inversión. Prioridad media, porque optimiza el análisis cualitativo pero no impide el cálculo de riesgo matemático básico. 5 SP.
     \end{itemize}
   \item \textbf{\'{E}pica 4: interfaz conversacional y motor RAG}
     \begin{itemize}
-      \item HU7: como asesor financiero, quiero interactuar con un chatbot en lenguaje natural para realizar consultas rápidas y que el Agente Enrutador derive mi pedido al sub-agente correspondiente. (Prioridad: Alta, 8 SP).
-      \item HU8: como asesor financiero, quiero que el chatbot recupere información histórica de reuniones pasadas mediante búsqueda semántica (RAG) para preparar mis próximas interacciones con clientes. (Prioridad: Alta, 13 SP).
+      \item HU7: como asesor financiero, quiero interactuar con un chatbot en lenguaje natural para realizar consultas rápidas y que el Agente Enrutador derive mi pedido al sub-agente correspondiente mediante Tool Calling. Prioridad alta, porque es la única interfaz de interacción habilitada para que el usuario final utilice el sistema. 8 SP.
+      \item HU8: como asesor financiero, quiero que el chatbot recupere información histórica de reuniones pasadas mediante búsqueda semántica (RAG) para preparar mis próximas interacciones con clientes. Prioridad alta, porque representa el mayor diferenciador tecnológico del sistema propuesto al dotar de memoria a largo plazo a la inteligencia artificial. 13 SP.
     \end{itemize}
 \end{itemize}
 
@@ -214,47 +215,66 @@ Los siguientes criterios establecen las condiciones medibles y verificables que 
 \begin{itemize}
   \item \textbf{\'{E}pica 1: generación y gestión de datos sintéticos}
     \begin{itemize}
-      \item Criterios de aceptación HU1: 
-        1. El \textit{dataset} debe contener al menos 100 perfiles de clientes simulados. 
-        2. Los datos generados deben exportarse en formato estructurado (CSV/JSON). 
-        3. Los registros no deben contener ninguna información de identificación personal (PII) real.
-      \item Criterios de aceptación HU2: 
-        1. Se deben generar al menos 50 transcripciones de prueba. 
-        2. El 20\% de las transcripciones deben incluir terminología financiera ambigua intencional. 
-        3. Los archivos generados deben almacenarse en formato de texto plano (.txt).
+      \item Criterios de aceptación HU1:
+        \begin{enumerate}
+          \item El dataset debe contener al menos 100 perfiles de clientes simulados.
+          \item Los datos generados deben exportarse en formato estructurado (CSV/JSON).
+          \item Los registros no deben contener ninguna información de identificación personal (PII) real.
+        \end{enumerate}
+      \item Criterios de aceptación HU2:
+        \begin{enumerate}
+          \item Se deben generar al menos 50 transcripciones de prueba.
+          \item El 20\% de las transcripciones deben incluir terminología financiera ambigua intencional.
+          \item Los archivos generados deben almacenarse en formato de texto plano (.txt).
+        \end{enumerate}
     \end{itemize}
+    
   \item \textbf{\'{E}pica 2: procesamiento y análisis de notas de reuniones}
     \begin{itemize}
-      \item Criterios de aceptación HU3: 
-        1. El sistema debe procesar un archivo de texto en un tiempo menor a 30 segundos. 
-        2. La salida debe extraer de forma estructurada al menos entidades, fechas y recomendaciones. 
-        3. El resultado debe devolverse en formato JSON para su persistencia en la base de datos.
-      \item Criterios de aceptación HU4: 
-        1. El sistema debe marcar con una bandera de alerta los documentos que infrinjan normativas simuladas de la SEC. 
-        2. Se debe generar un registro de auditoría en la base de datos por cada revisión completada. 
-        3. La precisión cualitativa de detección de violaciones debe ser evaluada como aceptable por el experto del dominio.
+      \item Criterios de aceptación HU3:
+        \begin{enumerate}
+          \item El sistema debe procesar un archivo de texto en un tiempo menor a 30 segundos.
+          \item La salida debe extraer de forma estructurada al menos entidades, fechas y recomendaciones.
+          \item El resultado debe devolverse en formato JSON para su persistencia en la base de datos.
+        \end{enumerate}
+      \item Criterios de aceptación HU4:
+        \begin{enumerate}
+          \item El sistema debe marcar con una bandera de alerta los documentos que infrinjan normativas simuladas de la SEC.
+          \item Se debe generar un registro de auditoría en la base de datos por cada revisión completada.
+          \item La precisión cualitativa de detección de violaciones debe ser evaluada como aceptable por el experto del dominio.
+        \end{enumerate}
     \end{itemize}
+    
   \item \textbf{\'{E}pica 3: análisis automatizado de portafolios}
     \begin{itemize}
-      \item Criterios de aceptación HU5: 
-        1. El agente debe ingerir correctamente archivos CSV de hasta 5 MB. 
-        2. El reporte generado debe calcular e incluir al menos tres métricas de riesgo financiero. 
-        3. El resultado del análisis debe visualizarse claramente en la interfaz de usuario.
-      \item Criterios de aceptación HU6: 
-        1. El análisis debe integrar al menos un índice de referencia sintético para la comparación. 
-        2. El agente debe generar una justificación en texto natural explicando las desviaciones de rendimiento. 
-        3. Las operaciones matemáticas de comparación no deben presentar errores de cálculo.
+      \item Criterios de aceptación HU5:
+        \begin{enumerate}
+          \item El agente debe ingerir correctamente archivos CSV de hasta 5 MB.
+          \item El reporte generado debe calcular e incluir al menos tres métricas de riesgo financiero.
+          \item El resultado del análisis debe visualizarse claramente en la interfaz de usuario.
+        \end{enumerate}
+      \item Criterios de aceptación HU6:
+        \begin{enumerate}
+          \item El análisis debe integrar al menos un índice de referencia sintético para la comparación.
+          \item El agente debe generar una justificación en texto natural que explique las desviaciones de rendimiento.
+          \item Las operaciones matemáticas de comparación no deben presentar errores de cálculo.
+        \end{enumerate}
     \end{itemize}
+    
   \item \textbf{\'{E}pica 4: interfaz conversacional y motor RAG}
     \begin{itemize}
-      \item Criterios de aceptación HU7: 
-        1. La interfaz web debe poseer una ventana de chat funcional. 
-        2. El Agente Enrutador debe invocar correctamente las herramientas (\textit{Tool Calling}) según la intención del usuario. 
-        3. El sistema debe gestionar el historial para mantener el contexto durante al menos cinco interacciones continuas.
-      \item Criterios de aceptación HU8: 
-        1. El sistema debe instanciar y consultar una base de datos vectorial local. 
-        2. Las respuestas generadas por el modelo deben incluir al menos una referencia al documento recuperado. 
-        3. El motor RAG debe combinar la recuperación de metadatos SQL con la similitud de cosenos en el espacio vectorial.
+      \item Criterios de aceptación HU7:
+        \begin{enumerate}
+          \item La interfaz web debe poseer una ventana de chat funcional.
+          \item El Agente Enrutador debe invocar correctamente las herramientas (Tool Calling) según la intención del usuario.
+          \item El sistema debe gestionar el historial para mantener el contexto durante al menos cinco interacciones continuas.
+        \end{enumerate}
+      \item Criterios de aceptación HU8:
+        \begin{enumerate}
+          \item El sistema debe instanciar y consultar una base de datos vectorial local.
+          \item Las respuestas generadas por el modelo deben incluir al menos una referencia al documento recuperado.
+          \item El motor RAG debe combinar la recuperación de metadatos SQL con la similitud de cosenos en el espacio vectorial.
+        \end{enumerate}
     \end{itemize}
 \end{itemize}
 
@@ -263,12 +283,12 @@ Los siguientes criterios establecen las condiciones medibles y verificables que 
 Al tratarse de un proyecto intensivo en datos e inteligencia artificial, la planificación del ciclo de vida se basa en la metodología CRISP-DM adaptada a enfoques ágiles:
 
 \begin{enumerate}
-  \item \textbf{Comprensión del negocio:} reducir la carga administrativa y de cumplimiento normativo de los asesores financieros para garantizar la confidencialidad mediante arquitectura \textit{Zero-Trust}. La métrica de éxito esperada es la automatización exitosa de tareas operativas que normalmente toman horas, para reducirlas a segundos.
+  \item \textbf{Comprensión del negocio:} reducir la carga administrativa y de cumplimiento normativo de los asesores financieros para garantizar la confidencialidad mediante arquitectura Zero-Trust. La métrica de éxito esperada es la automatización exitosa de tareas operativas que normalmente toman horas, para reducirlas a segundos.
   \item \textbf{Comprensión de los datos:} se trabajarán tres fuentes de datos sintéticos generados ad-hoc. Datos tabulares estructurados (perfiles de clientes), datos financieros (CSV de portafolios) y datos no estructurados de tipo texto (cientos de documentos de transcripciones de reuniones).
-  \item \textbf{Preparación de los datos:} incluirá la limpieza de texto, normalización de formatos numéricos y, críticamente, la fragmentación (\textit{chunking}) de los documentos de texto para la generación de incrustaciones (\textit{embeddings}) vectoriales.
-  \item \textbf{Modelado:} el problema se enfoca en tareas de Procesamiento de Lenguaje Natural (NLP) y Generación Aumentada por Recuperación (RAG). Se emplearán modelos fundacionales de pesos abiertos (de 8B a 20B parámetros) ejecutados localmente y orquestados mediante \textit{frameworks} de agentes (como PydanticAI).
-  \item \textbf{Evaluación del modelo:} se priorizará una validación cualitativa (\textit{Human-in-the-Loop}) por parte del experto del dominio (cliente). Adicionalmente, se medirán los tiempos de latencia en la inferencia y se auditará la calidad de recuperación del contexto en el motor RAG.
-  \item \textbf{Despliegue del modelo:} la solución se empaquetará utilizando una interfaz web y un backend asíncrono (FastAPI) acoplado a colas de tareas en SQLite, pensado para ejecutarse de forma local u \textit{on-premise}.
+  \item \textbf{Preparación de los datos:} incluirá la limpieza de texto, normalización de formatos numéricos y, críticamente, la fragmentación (chunking) de los documentos de texto para la generación de incrustaciones (embeddings) vectoriales.
+  \item \textbf{Modelado:} el problema se enfoca en tareas de Procesamiento de Lenguaje Natural (NLP) y Generación Aumentada por Recuperación (RAG). Se emplearán modelos fundacionales de pesos abiertos (de 8B a 20B parámetros) ejecutados localmente y orquestados mediante frameworks de agentes (como PydanticAI).
+  \item \textbf{Evaluación del modelo:} se priorizará una validación cualitativa (Human-in-the-Loop) por parte del experto del dominio (cliente). Adicionalmente, se medirán los tiempos de latencia en la inferencia y se auditará la calidad de recuperación del contexto en el motor RAG.
+  \item \textbf{Despliegue del modelo:} la solución se empaquetará utilizando una interfaz web y un backend asíncrono (FastAPI) acoplado a colas de tareas en SQLite, pensado para ejecutarse de forma local u on-premise.
 \end{enumerate}
 
 \section{9. Desglose del trabajo en tareas}
@@ -284,194 +304,124 @@ A continuación, se desglosan las Historias de Usuario (HU) en tareas técnicas 
 HU & Tarea técnica & Estimación & Prioridad \\ \hline
 HU1 & Programar script de generación de perfiles de clientes & 4 h & Alta \\ \hline
 HU1 & Desarrollar generador de datos de portafolios en CSV & 6 h & Alta \\ \hline
-HU2 & Crear \textit{prompts} de generación de diálogos para el LLM & 3 h & Media \\ \hline
+HU2 & Crear prompts de generación de diálogos para el LLM & 3 h & Media \\ \hline
 HU2 & Ejecutar generación masiva de transcripciones sintéticas & 5 h & Alta \\ \hline
-HU3 & Implementar \textit{endpoint} asíncrono para ingesta de archivos & 4 h & Alta \\ \hline
-HU3 & Configurar \textit{prompt} de extracción estructurada en JSON & 6 h & Alta \\ \hline
+HU3 & Implementar endpoint asíncrono para ingesta de archivos & 4 h & Alta \\ \hline
+HU3 & Configurar prompt de extracción estructurada en JSON & 6 h & Alta \\ \hline
 HU4 & Definir catálogo de reglas de cumplimiento simuladas & 3 h & Baja \\ \hline
 HU4 & Implementar validador normativo en pipeline de notas & 5 h & Media \\ \hline
-HU5 & Desarrollar módulo \textit{parser} de archivos CSV de portafolios & 4 h & Alta \\ \hline
+HU5 & Desarrollar módulo parser de archivos CSV de portafolios & 4 h & Alta \\ \hline
 HU5 & Programar cálculos de métricas de riesgo en Python & 7 h & Alta \\ \hline
-HU6 & Generar estructura de datos para \textit{benchmarks} sintéticos & 3 h & Baja \\ \hline
+HU6 & Generar estructura de datos para benchmarks sintéticos & 3 h & Baja \\ \hline
 HU6 & Implementar lógica de comparación de rendimientos & 5 h & Media \\ \hline
 HU7 & Desarrollar interfaz de usuario del chatbot (Frontend) & 6 h & Alta \\ \hline
-HU7 & Implementar Agente Enrutador con \textit{Tool Calling} & 8 h & Alta \\ \hline
-HU8 & Configurar base de datos vectorial local y \textit{embeddings} & 6 h & Alta \\ \hline
-HU8 & Programar \textit{pipeline} de fragmentación e ingesta (\textit{chunking}) & 5 h & Alta \\ \hline
+HU7 & Implementar Agente Enrutador con Tool Calling & 8 h & Alta \\ \hline
+HU8 & Configurar base de datos vectorial local y embeddings & 6 h & Alta \\ \hline
+HU8 & Programar pipeline de fragmentación e ingesta (chunking) & 5 h & Alta \\ \hline
 HU8 & Desarrollar flujo de recuperación y generación (RAG) & 8 h & Alta \\ \hline
 \end{tabularx}
 \end{table}
 
-\section{10. Planificación de Sprints}
+\section{10. Planificación de sprints}
+\label{sec:sprints}
 
-Organizar las tareas técnicas del proyecto en sprints de trabajo que permitan distribuir de forma equilibrada la carga horaria total, estimada en 600 horas.
-
-\textbf{Consigna:}
-\begin{itemize}
-  \item Completar una tabla que relacione sprints con HU y tareas técnicas correspondientes.
-  \item Incluir estimación en horas para cada tarea.
-  \item Indicar responsable y porcentaje de avance estimado o completado.
-  \item Contemplar también tareas de planificación, documentación, redacción de memoria y preparación de defensa.
-\end{itemize}
-
-\textbf{Conceptos clave:}
-\begin{itemize}
-  \item Una \'{e}pica es una unidad funcional amplia; una historia de usuario es una funcionalidad concreta; un sprint es una unidad de tiempo donde se ejecutan tareas.
-  \item Las tareas son el nivel más desagregado: permiten estimar tiempos, asignar responsables y monitorear progreso.
-\end{itemize}
-
-\textbf{Duración sugerida:}
-\begin{itemize}
-  \item Para un proyecto de 600 h, se recomienda planificar entre 10 y 12 sprints de aproximadamente 2 semanas cada uno.
-  \item Asignar entre 45 y 50 horas efectivas por sprint a tareas técnicas.
-  \item Reservar 100 a 120 h para actividades no técnicas (planificación, escritura, reuniones, defensa).
-\end{itemize}
-
-\textbf{Importante:}
-\begin{itemize}
-  \item En proyectos individuales, el responsable suele ser el propio autor.
-  \item Aun así, desagregar tareas facilita el seguimiento y mejora continua.
-\end{itemize}
-
-\textbf{Conversión opcional de Story Points a horas:}
-\begin{itemize}
-  \item 1 SP \(\approx\) 2 h como referencia flexible.
-  \item Tener en cuenta aproximaciones tipo Fibonacci.
-\end{itemize}
+La planificación del proyecto contempla un total estimado de 600 horas de trabajo. Se ha definido un esquema de 12 sprints de dos semanas de duración cada uno para garantizar un avance iterativo. De acuerdo con las metodologías ágiles, la velocidad del equipo se mide mediante la asignación de Story Points basada en la serie de Fibonacci. Las tareas técnicas requieren aproximadamente 40 a 45 horas por sprint, mientras que el tiempo restante se destina a investigación, pruebas, documentación y reuniones.
 
 \begin{table}[htpb]
 \centering
-\caption{Formato sugerido}
+\caption{Planificación de sprints y asignación de tareas}
 \begin{tabularx}{\linewidth}{@{}|l|l|X|c|l|c|@{}}
 \hline
 \rowcolor[HTML]{C0C0C0}
 Sprint & HU o fase & Tarea & Horas / SP & Responsable & \% Completado \\ \hline
-Sprint 0 & Planificación & Definir alcance y cronograma & 10 h & Alumno & 100\% \\ \hline
-Sprint 0 & Planificación & Reunión con el tutor/cliente & 5 h & Alumno & 50\% \\ \hline
-Sprint 0 & Planificación & Ajuste de los entregables & 6 h & Alumno & 25\% \\ \hline
-Sprint 1 & HU1 & Tarea 1 HU1 & 6 h / 3 SP & Alumno & 0\% \\ \hline
-Sprint 1 & HU1 & Tarea 2 HU1 & 10 h / 5 SP & Alumno & 0\% \\ \hline
-Sprint 2 & HU2 & Tarea 1 HU2 & 7 h / 5 SP & Alumno & 0\% \\ \hline
-... & ... & ... & ... & ... & ... \\ \hline
-Sprint 5 & Escritura & Redacción memoria & 50 h / 34 SP & Alumno & 0\% \\ \hline
-Sprint 6 & Defensa & Preparación de la exposición & 20 h / 13 SP & Alumno & 0\% \\ \hline
+Sprint 0 & Planificación & Redacción del plan de proyecto y cronograma & 15 h & Alumno & 100\% \\ \hline
+Sprint 1 & Arquitectura & Configuración del entorno y bases de datos & 40 h & Alumno & 0\% \\ \hline
+Sprint 2 & HU1 & Generación de dataset sintético de perfiles & 40 h / 5 SP & Alumno & 0\% \\ \hline
+Sprint 3 & HU2 & Simulación masiva de transcripciones & 42 h / 3 SP & Alumno & 0\% \\ \hline
+Sprint 4 & HU3 & Extracción estructurada de entidades (JSON) & 45 h / 8 SP & Alumno & 0\% \\ \hline
+Sprint 5 & HU4 & Desarrollo del validador normativo SEC & 40 h / 5 SP & Alumno & 0\% \\ \hline
+Sprint 6 & HU5 & Parser y métricas de riesgo para portafolios & 45 h / 8 SP & Alumno & 0\% \\ \hline
+Sprint 7 & HU6 & Lógica de comparación con benchmarks & 40 h / 5 SP & Alumno & 0\% \\ \hline
+Sprint 8 & HU8 & Pipeline de fragmentación y embeddings local & 45 h / 8 SP & Alumno & 0\% \\ \hline
+Sprint 9 & HU8 & Flujo de recuperación y motor RAG & 45 h / 13 SP & Alumno & 0\% \\ \hline
+Sprint 10 & HU7 & Interfaz de usuario e integración Tool Calling & 45 h / 8 SP & Alumno & 0\% \\ \hline
+Sprint 11 & Validación & Pruebas finales y ajustes del sistema & 40 h & Alumno & 0\% \\ \hline
+Sprint 12 & Cierre & Redacción de la memoria y preparación de la defensa & 118 h & Alumno & 0\% \\ \hline
 \end{tabularx}
 \end{table}
 
-\textbf{Recomendaciones:}
-\begin{itemize}
-  \item Verificar que la carga horaria por sprint sea equilibrada.
-  \item Usar sprints de 1 a 3 semanas, acordes al cronograma general.
-  \item Actualizar el \% completado durante el seguimiento del proyecto.
-  \item Considerar un sprint final exclusivo para pruebas, revisión y ajustes antes de la defensa.
-\end{itemize}
 
-
-\section{11. Diagrama de Gantt (sprints)}
+\section{11. Diagrama de Gantt}
 \label{sec:gantt}
 
-Visualizar en un diagrama de Gantt la planificación temporal del proyecto, tomando como base los sprints definidos en la sección anterior. Debe contemplar todas las horas del proyecto.
+El siguiente diagrama de Gantt ilustra la distribución temporal de los 12 sprints a lo largo de los meses de ejecución del proyecto. Se diferencian las etapas de planificación inicial, el desarrollo técnico iterativo y las fases finales de redacción de la memoria y defensa pública.
 
-Consigna:
-
-\begin{itemize}
-
-\item Elaborar un diagrama de Gantt que muestre la secuencia temporal de los sprints.
-
-\item Cada fila debe representar un sprint (con su número o nombre), y el eje horizontal debe indicar el tiempo (en semanas o fechas concretas).
-
-\item Las tareas técnicas derivadas de HU deben diferenciarse visualmente (por ejemplo, con un color distinto) de las tareas no técnicas (planificación, redacción, defensa).
-
-\item Incluir todas las tareas estimadas en cada sprint.
-\end{itemize}
-
-Recomendaciones para el Gantt:
-
-\begin{itemize}
-
-	\item Podés usar herramientas gratuitas como TeamGantt, ClickUp, GanttProject, [Google Sheets], [Trello + Planyway], entre otras.
-	\item Ordená los sprints de forma cronológica, comenzando con Sprint 0 (planificación) y finalizando con el sprint de defensa.
-	\item Asegurate de reflejar la duración realista de cada sprint según tu disponibilidad y el cronograma general del posgrado.
-	\item Incluí hitos importantes: reuniones, entregas parciales, defensa.
-\end{itemize}
-
-
-Incluir una imagen legible del diagrama de Gantt. Si es muy ancho, presentar primero la tabla y luego el gráfico de barras.
-
+\begin{figure}[htpb]
+\centering 
+\includegraphics[width=.95\textwidth]{./Figuras/Gantt-2.png}
+\caption{Diagrama de Gantt con la planificación temporal de los sprints.}
+\label{fig:gantt}
+\end{figure}
 
 
 \section{12. Gobernanza de datos}
 \label{sec:gobernanza}
 
-En esta sección se debe analizar de manera integral el marco normativo y ético asociado al uso de los datos y al desarrollo de soluciones basadas en inteligencia artificial.
-
-El análisis se divide en dos partes:
-
-\begin{itemize}
-  \item Cumplimiento normativo.
-  \item Ética en el uso de inteligencia artificial.
-\end{itemize}
+El proyecto integra un análisis constante de la gobernanza de datos desde las fases iniciales del ciclo de vida para garantizar la calidad y la viabilidad legal del producto. El concepto de calidad se define, bajo los lineamientos de la norma ISO 9000, como el nivel en que las características del sistema satisfacen los requerimientos operativos y de seguridad.
 
 \subsection{Cumplimiento normativo}
-Este análisis es clave para garantizar el cumplimiento normativo y evitar conflictos legales durante el desarrollo y publicación del proyecto.
-
-En esta subsección se debe identificar si los datos utilizados en el proyecto están sujetos a normativas de protección de datos y privacidad, y en qué condiciones pueden emplearse.
-
-Aspectos a considerar:
-
+El sistema procesa información del sector financiero, por lo que el cumplimiento normativo es el eje central de su diseño. Se establece que:
 \begin{itemize}
-  \item Determinar si los datos están regulados por normativas como el GDPR, la Ley 25.326 de Protección de Datos Personales (Argentina), la HIPAA u otras, según la jurisdicción o la temática del proyecto.
-  \item Aclarar si las fuentes de datos son propias, de acceso público o licenciadas. En este último caso, explicitar la licencia correspondiente y sus condiciones de uso. Realizar este mismo análisis para las herramientas y, en caso de corresponder, para los modelos preentrenados a emplear.
-  \item Analizar la viabilidad legal del proyecto, considerando los mecanismos necesarios para garantizar el cumplimiento normativo y la trazabilidad de los datos.
+  \item la arquitectura Zero-Trust y el uso de modelos open-weights locales previenen la fuga de datos hacia servidores de terceros.
+  \item esta estrategia garantiza el cumplimiento de la Ley 25.326 de Protección de Datos Personales en Argentina y se alinea con los estándares de confidencialidad de la SEC para la gestión de información de identificación personal (PII).
+  \item los datos de entrenamiento y prueba se limitan a un dataset sintético autogenerado que anula cualquier riesgo de violar acuerdos de confidencialidad.
 \end{itemize}
 
 \subsection{Ética en el uso de inteligencia artificial}
-
-En esta subsección se debe reflexionar sobre los aspectos éticos vinculados al uso de datos y algoritmos de inteligencia artificial. Se espera una evaluación de la integridad del sistema y su impacto social.
-
-Aspectos a considerar:
-
+El diseño del sistema asume la responsabilidad de mitigar posibles riesgos éticos derivados del uso de modelos generativos:
 \begin{itemize}
-	\item Identificar posibles sesgos en los datos o modelos (ideológicos, culturales, de género, geográficos, etc.) y analizar sus consecuencias (por ejemplo: discriminación, manipulación, pérdida de privacidad o desinformación).
-	\item Analizar los posibles riesgos en términos de impacto social del uso indebido de la solución a desarrollar.
-	\item En caso de corresponder, proponer medidas de mitigación y mecanismos de confianza (auditorías, documentación, trazabilidad, revisión humana, etc.).
-	\item Finalmente, elaborar una reflexión general sobre la ética del proyecto, considerando tanto la equidad y transparencia del sistema como su impacto potencial en la sociedad.
-
+  \item para evitar la manipulación o la desinformación financiera mediante alucinaciones del modelo, el sistema se restringe a responder únicamente sobre el contexto recuperado por el motor RAG.
+  \item se implementan registros de auditoría obligatorios para garantizar la trazabilidad de cada decisión algorítmica.
+  \item se requiere una validación cualitativa constante por parte del asesor humano (experto del dominio) antes de compartir cualquier reporte con el cliente final.
 \end{itemize}
 
 
 \section{13. Gestión de riesgos}
 \label{sec:riesgos}
 
-\begin{consigna}{red}
-a) Identificación de los riesgos (al menos cinco) y estimación de sus consecuencias:
+a) Identificación de los riesgos y estimación de sus consecuencias:
  
-Riesgo 1: detallar el riesgo (riesgo es algo que si ocurre altera los planes previstos de forma negativa)
+Riesgo 1: insuficiencia de memoria VRAM para ejecutar los modelos fundacionales requeridos.
 \begin{itemize}
-	\item Severidad (S): mientras más severo, más alto es el número (usar números del 1 al 10).\\
-	Justificar el motivo por el cual se asigna determinado número de severidad (S).
-	\item Probabilidad de ocurrencia (O): mientras más probable, más alto es el número (usar del 1 al 10).\\
-	Justificar el motivo por el cual se asigna determinado número de (O). 
+	\item Severidad (S): 9. Si el hardware no soporta la inferencia local, el proyecto no puede garantizar la privacidad de los datos.
+	\item Probabilidad de ocurrencia (O): 4. Se dispone de hardware adecuado, pero los modelos de 20B parámetros exigen alta capacidad de cómputo.
 \end{itemize}   
 
-Riesgo 2:
+Riesgo 2: alucinaciones críticas en el motor de búsqueda RAG.
 \begin{itemize}
-	\item Severidad (S): X.\\
-	Justificación...
-	\item Ocurrencia (O): Y.\\
-	Justificación...
+	\item Severidad (S): 8. Proporcionar información financiera incorrecta destruye la confianza del cliente en la herramienta.
+	\item Probabilidad de ocurrencia (O): 5. Los modelos generativos son propensos a inventar datos si el contexto inyectado no es altamente preciso.
 \end{itemize}
 
-Riesgo 3:
+Riesgo 3: incompatibilidad o depreciación de las bibliotecas de orquestación de agentes.
 \begin{itemize}
-	\item Severidad (S):  X.\\
-	Justificación...
-	\item Ocurrencia (O): Y.\\
-	Justificación...
+	\item Severidad (S): 6. Requeriría reescribir partes del código base, lo que retrasaría los plazos.
+	\item Probabilidad de ocurrencia (O): 4. El ecosistema de código abierto para inteligencia artificial evoluciona rápidamente y sufre cambios drásticos de versión.
 \end{itemize}
 
+Riesgo 4: el dataset sintético carece de la varianza necesaria para simular escenarios reales.
+\begin{itemize}
+	\item Severidad (S): 7. El modelo podría sobreajustarse y fallar al enfrentarse a documentos reales en el futuro.
+	\item Probabilidad de ocurrencia (O): 6. Generar variabilidad humana realista de forma procedural es técnicamente complejo.
+\end{itemize}
 
-b) Tabla de gestión de riesgos:      (El RPN se calcula como RPN=SxO)
+Riesgo 5: cuellos de botella en la cola de tareas asíncrona de SQLite.
+\begin{itemize}
+	\item Severidad (S): 5. Afectaría la experiencia del usuario por altas latencias, pero no corrompe los datos.
+	\item Probabilidad de ocurrencia (O): 3. SQLite tiene límites de concurrencia conocidos, pero son suficientes para un prototipo de uso individual.
+\end{itemize}
+
+b) Tabla de gestión de riesgos (RPN = Severidad x Ocurrencia):
 
 \begin{table}[htpb]
 \centering
@@ -479,99 +429,67 @@ b) Tabla de gestión de riesgos:      (El RPN se calcula como RPN=SxO)
 \hline
 \rowcolor[HTML]{C0C0C0} 
 Riesgo & S & O & RPN & S* & O* & RPN* \\ \hline
-       &   &   &     &    &    &      \\ \hline
-       &   &   &     &    &    &      \\ \hline
-       &   &   &     &    &    &      \\ \hline
-       &   &   &     &    &    &      \\ \hline
-       &   &   &     &    &    &      \\ \hline
+1. Insuficiencia de VRAM & 9 & 4 & 36 & 9 & 2 & 18 \\ \hline
+2. Alucinaciones en motor RAG & 8 & 5 & 40 & 5 & 3 & 15 \\ \hline
+3. Depreciación de bibliotecas & 6 & 4 & 24 & - & - & - \\ \hline
+4. Poca varianza en dataset sintético & 7 & 6 & 42 & 7 & 3 & 21 \\ \hline
+5. Cuellos de botella asíncronos & 5 & 3 & 15 & - & - & - \\ \hline
 \end{tabularx}%
 \end{table}
 
-Criterio adoptado: 
+Criterio adoptado: se tomarán medidas de mitigación en los riesgos con un RPN mayor a 30.
 
-Se tomarán medidas de mitigación en los riesgos cuyos números de RPN sean mayores a...
-
-Nota: los valores marcados con (*) en la tabla corresponden luego de haber aplicado la mitigación.
-
-c) Plan de mitigación de los riesgos que originalmente excedían el RPN máximo establecido:
+c) Plan de mitigación de los riesgos:
  
-Riesgo 1: plan de mitigación (si por el RPN fuera necesario elaborar un plan de mitigación).
-  Nueva asignación de S y O, con su respectiva justificación:
+Riesgo 1 (Insuficiencia de VRAM): se implementarán técnicas de cuantización a 4-bits para reducir el tamaño de los modelos en memoria sin pérdida significativa de rendimiento.
   \begin{itemize}
-	\item Severidad (S*): mientras más severo, más alto es el número (usar números del 1 al 10).
-          Justificar el motivo por el cual se asigna determinado número de severidad (S).
-	\item Probabilidad de ocurrencia (O*): mientras más probable, más alto es el número (usar del 1 al 10).
-          Justificar el motivo por el cual se asigna determinado número de (O).
-	\end{itemize}
+	\item Severidad (S*): 9. El riesgo de fallo total se mantiene si no entra en memoria.
+	\item Probabilidad de ocurrencia (O*): 2. La cuantización reduce drásticamente las probabilidades de quedarse sin memoria.
+  \end{itemize}
 
-Riesgo 2: plan de mitigación (si por el RPN fuera necesario elaborar un plan de mitigación).
- 
-Riesgo 3: plan de mitigación (si por el RPN fuera necesario elaborar un plan de mitigación).
+Riesgo 2 (Alucinaciones en motor RAG): se reducirá la temperatura del modelo generativo a cero y se programará un prompt de sistema estricto que obligue al modelo a responder ``No lo sé'' si la respuesta no se encuentra en el contexto provisto.
+  \begin{itemize}
+	\item Severidad (S*): 5. La restricción limita el daño potencial de una respuesta falsa.
+	\item Probabilidad de ocurrencia (O*): 3. Las directivas estrictas en el prompt disminuyen significativamente las invenciones.
+  \end{itemize}
 
-\end{consigna}
+Riesgo 4 (Poca varianza en dataset sintético): se utilizarán múltiples modelos fundacionales con diferentes temperaturas y directivas de rol para generar los datos sintéticos de manera heterogénea.
+  \begin{itemize}
+	\item Severidad (S*): 7. El impacto funcional de probar con datos malos se mantiene.
+	\item Probabilidad de ocurrencia (O*): 3. El uso de diversos modelos asegura una alta variabilidad en la generación del texto.
+  \end{itemize}
 
-\section{14. Sprint Review}
+\section{14. Sprint review}
 \label{sec:sprint_review}
 
-La revisión de sprint (\emph{Sprint Review}) es una práctica fundamental en metodologías ágiles. Consiste en revisar y evaluar lo que se ha completado al finalizar un sprint. En esta instancia, se presentan los avances y se verifica si las funcionalidades cumplen con los criterios de aceptación establecidos. También se identifican entregables parciales y se consideran ajustes si es necesario.
+La revisión de cada iteración exige garantizar la integración vertical del proyecto, y se establece una distinción clara entre la verificación técnica (cumplimiento de los requisitos internos) y la validación del producto (satisfacción de las expectativas del cliente).
 
-Aunque el proyecto aún se encuentre en etapa de planificación, esta sección permite proyectar cómo se evaluarán las funcionalidades más importantes del backlog. Esta mirada anticipada favorece la planificación enfocada en valor y permite reflexionar sobre posibles obstáculos.
-
-\textbf{Objetivo:} anticipar cómo se evaluará el avance del proyecto a medida que se desarrollen las funcionalidades, utilizando como base al menos cuatro historias de usuario del \emph{Product Backlog}.
-
-
-Seleccionar al menos 4 HU del Product Backlog. Para cada una, completar la siguiente tabla de revisión proyectada:
-
-\textbf{Formato sugerido:}
 \begin{table}[htpb]
 \renewcommand{\arraystretch}{1.5}
-\begin{tabular}{|>{\raggedright\arraybackslash}m{2.4cm}|
-                >{\raggedright\arraybackslash}m{2.3cm}|
-                >{\raggedright\arraybackslash}m{3cm}|
-                >{\raggedright\arraybackslash}m{3cm}|
-                >{\raggedright\arraybackslash}m{3cm}|}
+\begin{tabular}{|>{\raggedright\arraybackslash}m{2cm}|
+                >{\raggedright\arraybackslash}m{3.5cm}|
+                >{\raggedright\arraybackslash}m{2.5cm}|
+                >{\raggedright\arraybackslash}m{3.5cm}|
+                >{\raggedright\arraybackslash}m{2.5cm}|}
 \hline
 \rowcolor[HTML]{CCCCCC}
-\textbf{HU seleccionada} & \textbf{Tareas asociadas} & \textbf{Entregable esperado} & \textbf{¿Cómo sabrás que está cumplida?} & \textbf{Observaciones o riesgos} \\
+\textbf{HU} & \textbf{Tareas asociadas} & \textbf{Entregable esperado} & \textbf{¿Cómo sabrás que está cumplida?} & \textbf{Observaciones o riesgos} \\
 \hline
-                         & Tarea 1 &                             &                                           &                                     \\ \cline{2-2}
-\multirow{-2}{=}{HU1}    & Tarea 2 & \multirow{-2}{=}{Módulo funcional} & \multirow{-2}{=}{Cumple criterios de aceptación definidos} & \multirow{-2}{=}{Falta validar con el tutor} \\
+HU1 & Programar scripts en Python y desarrollar generador de CSV. & Repositorio de datos sintéticos. & Verificación técnica: el script produce 100 perfiles estructurados en CSV sin datos reales. & Riesgo de generar datos con poca varianza estadística. \\
 \hline
-                         & Tarea 1 &                             &                                           &                                     \\ \cline{2-2}
-\multirow{-2}{=}{HU3}    & Tarea 2 & \multirow{-2}{=}{Reporte generado} & \multirow{-2}{=}{Exportación disponible y clara} & \multirow{-2}{=}{Requiere datos reales} \\
+HU3 & Configurar prompts estructurados e implementar endpoint de ingesta. & Archivo JSON con entidades extraídas. & Verificación técnica: el procesamiento demora menos de 30 segundos y el JSON se persiste en la base de datos local. & Riesgo de pérdida de información en transcripciones largas. \\
 \hline
-                         & Tarea 1 &                             &                                           &                                     \\ \cline{2-2}
-\multirow{-2}{=}{HU5}    & Tarea 2 & \multirow{-2}{=}{Panel de gestión} & \multirow{-2}{=}{Roles diferenciados operativos} & \multirow{-2}{=}{Riesgo en integración} \\
+HU5 & Desarrollar parser CSV y programar métricas de riesgo. & Reporte matemático de métricas de portafolio. & Validación del cliente: el experto confirma que el cálculo del riesgo financiero es matemáticamente exacto. & Requiere extrema precisión y pruebas unitarias. \\
 \hline
-                         & Tarea 1 &                             &                                           &                                     \\ \cline{2-2}
-\multirow{-2}{=}{HU7}    & Tarea 2 & \multirow{-2}{=}{Informe trimestral} & \multirow{-2}{=}{PDF con gráficos y evolución} & \multirow{-2}{=}{Puede faltar tiempo para ajustes} \\
+HU8 & Configurar base vectorial y desarrollar flujo de generación aumentada. & Módulo RAG funcional con memoria semántica. & Validación del cliente: el experto aprueba la pertinencia y utilidad de los documentos recuperados por el bot. & Alta probabilidad de alucinaciones en el texto final. \\
 \hline
 \end{tabular}
 \end{table}
 
-\section{15. Sprint Retrospective}    
+\section{15. Sprint retrospective}    
 \label{sec:sprint_retro}
 
-La retrospectiva de sprint es una práctica orientada a la mejora continua. Al finalizar un sprint, el equipo (o el alumno, si trabaja de forma individual) reflexiona sobre lo que funcionó bien, lo que puede mejorarse y qué acciones concretas pueden implementarse para trabajar mejor en el futuro.
-
-Durante la cursada se propuso el uso de la \textbf{Estrella de la Retrospectiva}, que organiza la reflexión en torno a cinco ejes:
-
-\begin{itemize}
-\item  ¿Qué hacer más?
-\item  ¿Qué hacer menos?
-\item  ¿Qué mantener?
-\item  ¿Qué empezar a hacer?
-\item  ¿Qué dejar de hacer?
-\end{itemize}
-
-Aun en una etapa temprana, esta herramienta permite que el alumno planifique su forma de trabajar, identifique anticipadamente posibles dificultades y diseñe estrategias de organización personal.
-
-\textbf{Objetivo:} reflexionar sobre las condiciones iniciales del proyecto, identificando fortalezas, posibles dificultades y estrategias de mejora, incluso antes del inicio del desarrollo.
-
-
-Completar la siguiente tabla tomando como referencia los cinco ejes de la Estrella de la Retrospectiva (\emph{Starfish} o estrella de mar). Esta instancia te ayudará a definir buenas prácticas desde el inicio y prepararte para enfrentar el trabajo de forma organizada y flexible. Se deberá completar la tabla al menos para 3 sprints técnicos y 1 no técnico.
-
-\textbf{Formato sugerido:}
+Al finalizar un sprint, se realiza una reflexión sobre las prácticas implementadas para aplicar una mejora continua a la gestión del proyecto. A continuación se proyectan acciones organizadas bajo los cinco ejes de la Estrella de la Retrospectiva.
 
 \begin{table}[htpb]
 \renewcommand{\arraystretch}{1.4}
@@ -583,20 +501,16 @@ Completar la siguiente tabla tomando como referencia los cinco ejes de la Estrel
                 >{\raggedright\arraybackslash}p{2.3cm}|}
 \hline
 \rowcolor[HTML]{CCCCCC} 
-\textbf{Sprint tipo y N°} & \textbf{¿Qué hacer más?} & \textbf{¿Qué hacer menos?} & \textbf{¿Qué mantener?} & \textbf{¿Qué empezar a hacer?} & \textbf{¿Qué dejar de hacer?} \\
+\textbf{Sprint y tipo} & \textbf{¿Qué hacer más?} & \textbf{¿Qué hacer menos?} & \textbf{¿Qué mantener?} & \textbf{¿Qué empezar a hacer?} & \textbf{¿Qué dejar de hacer?} \\
 \hline
-Sprint técnico - 1 & Validaciones continuas con el alumno & Cambios sin versión registrada & Pruebas con datos simulados & Documentar cambios propuestos & Ajustes sin análisis de impacto \\
+Sprint 2 (Técnico) & Revisar el código con herramientas de análisis estático. & Postergar la escritura de las pruebas unitarias. & La organización modular del código en funciones pequeñas. & Documentar la estructura de los datos JSON autogenerados. & Ajustar formatos de salida sin probar el impacto en otros módulos. \\
 \hline
-Sprint técnico - 2 & Verificar configuraciones en múltiples escenarios & Modificar parámetros sin guardar historial & Perfiles reutilizables & Usar logs para configuración & Repetir pruebas manuales innecesarias \\
+Sprint 9 (Técnico) & Ajustar experimentalmente los umbrales de similitud del motor RAG. & Modificar los prompts base sin guardar un historial de versiones. & El uso de modelos fundacionales locales para mantener la privacidad. & Registrar la latencia de cada inferencia para auditoría. & Cambiar el tamaño de los fragmentos de texto (chunking) sin métricas. \\
 \hline
-Sprint técnico - 8 & Comparar correlaciones con casos previos & Cambiar parámetros sin justificar & Revisión cruzada de métricas & Anotar configuraciones usadas & Trabajar sin respaldo de datos \\
+Sprint 10 (Técnico) & Interacciones fluidas con el cliente simulando casos límite. & Subestimar el tiempo requerido para el diseño de la interfaz web. & El enfoque asíncrono para prevenir el bloqueo del servidor. & Manejar los errores de la interfaz para informar claramente al usuario. & Probar la comunicación del frontend y backend en un único entorno. \\
 \hline
-Sprint no técnico - 12 (por ej.: ``Defensa'') & Ensayos orales con feedback & Cambiar contenidos en la memoria & Material visual claro & Dividir la presentación por bloques & Agregar gráficos difíciles de explicar \\
+Sprint 12 (No técnico) & Ensayos orales cronometrados para medir la duración de la presentación. & Modificar el alcance técnico a último momento. & La integración vertical entre los objetivos y las historias de usuario. & Grabar las exposiciones de práctica para observar el lenguaje corporal. & Agregar información nueva no documentada en el plan original. \\
 \hline
 \end{tabular}
 \end{table}
-
-
-
-
 \end{document}

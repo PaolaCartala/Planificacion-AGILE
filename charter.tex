@@ -5,7 +5,7 @@
 
 
 % El títulos de la memoria, se usa en la carátula y se puede usar el cualquier lugar del documento con el comando \ttitle
-\titulo{Sistema multi-agente basado en modelos de lenguaje locales y generación aumentada por recuperación (RAG) para la asistencia segura en asesoría financiera}
+\titulo{Sistema multi-agente basado en modelos de lenguaje locales y generación aumentada por recuperación para la asistencia segura en asesoría financiera}
 
 % Nombre del posgrado, se usa en la carátula y se puede usar el cualquier lugar del documento con el comando \degreename
 \posgrado{Carrera de Especialización en Inteligencia Artificial}
@@ -17,8 +17,8 @@
 % El nombre del director y co-director, se puede usar el cualquier lugar del documento con el comando \supname y \cosupname y \pertesupname y \pertecosupname
 \director{A Definir}
 \pertenenciaDirector{FIUBA} 
-% \codirector{} % para que aparezca en la portada se debe descomentar la opción codirector en los parámetros de documentclass
-\pertenenciaCoDirector{FIUBA}
+% \codirector{}
+% \pertenenciaCoDirector{FIUBA}
 
 % Nombre del cliente, quien va a aprobar los resultados del proyecto, se puede usar con el comando \clientename y \empclientename
 \cliente{Silvina Mengarelli}
@@ -26,8 +26,10 @@
  
 \fechaINICIO{3 de marzo de 2026}		%Fecha de inicio de la cursada de GdP \fechaInicioName
 \fechaFINALPlan{21 de abril de 2026} 	%Fecha de final de cursada de GdP
-\fechaFINALTrabajo{15 de mayo de 2024}	%Fecha de defensa pública del trabajo final
+\fechaFINALTrabajo{25 de octubre de 2026}	%Fecha de defensa pública del trabajo final
 
+\usepackage{float}
+\raggedbottom
 
 \begin{document}
 
@@ -56,8 +58,8 @@ Revisión & \multicolumn{1}{c|}{\cellcolor[HTML]{C0C0C0}Detalles de los cambios 
 0      & Creación del documento                                 &\fechaInicioName \\ \hline
 1      & Se completa hasta el punto 5 inclusive                 & 15 de marzo de 2026 \\ \hline
 2      & Se completa hasta el punto 9 inclusive                 & 23 de marzo de 2026 \\ \hline
-3      & Se completa hasta el punto 12 inclusive                & 7 de abril de 2026 \\ \hline
-%4      & Se completa el plan	                                 & {día} de {mes} de 202X \\ \hline
+3      & Se completa hasta el punto 15 inclusive                & 7 de abril de 2026 \\ \hline
+4      & Se completa el plan	                                 & 19 de abril de 2026 \\ \hline
 
 % Si hay más correcciones pasada la versión 4 también se deben especificar acá
 
@@ -75,19 +77,26 @@ Buenos Aires, \fechaInicioName
 
 \vspace{2cm}
 
-Por medio de la presente se acuerda con \authorname\hspace{1px} que su Trabajo Final de la \degreename\hspace{1px} se titulará ``\ttitle'' y consistirá en el desarrollo de un asistente virtual financiero seguro mediante una arquitectura multi-agente, modelos de lenguaje locales (open-weights) y generación aumentada por recuperación (RAG). El trabajo tendrá un presupuesto preliminar estimado de 600 horas y un costo estimado de \$ 0 (al utilizar herramientas de código abierto e infraestructura computacional propia), con fecha de inicio el \fechaInicioName\hspace{1px} y fecha de presentación pública el \fechaFinalName.
+Por medio de la presente se acuerda con \authorname\hspace{1px} que su Trabajo Final de la \degreename\hspace{1px} se titulará ``\ttitle'' y consistirá en el desarrollo de un asistente virtual financiero seguro mediante una arquitectura multi-agente, modelos de lenguaje locales (open-weights) y generación aumentada por recuperación (RAG). El trabajo tendrá un presupuesto preliminar estimado de 600 horas, con fecha de inicio el \fechaInicioName\hspace{1px} y fecha de presentación pública el \fechaFinalName.
 
 Se adjunta a esta acta la planificación inicial.
 
 \vfill
 
 % Esta parte se construye sola con la información que hayan cargado en el preámbulo del documento y no debe modificarla
+
 \begin{table}[ht]
+
 \centering
+
 \begin{tabular}{ccc}
+
 \begin{tabular}[c]{@{}c@{}}Dr. Ing. Ariel Lutenberg \\ Director posgrado FIUBA\end{tabular} & \hspace{2cm} & \begin{tabular}[c]{@{}c@{}}\clientename \\ \empclientename \end{tabular} \vspace{2.5cm} \\ 
+
 \multicolumn{3}{c}{\begin{tabular}[c]{@{}c@{}} \supname \\ Director del Trabajo Final\end{tabular}} \vspace{2.5cm} \\
+
 \end{tabular}
+
 \end{table}
 
 
@@ -122,7 +131,7 @@ En la figura \ref{fig:diagBloques} se presenta el diagrama en bloques del sistem
 \rowcolor[HTML]{C0C0C0} 
 Rol           & Nombre y Apellido & Organización 	& Puesto 	\\ \hline
 Cliente       & \clientename      &\empclientename	&    CEO    	\\ \hline
-Responsable   & \authorname       & FIUBA        	& Alumno 	\\ \hline
+Responsable   & \authorname       & FIUBA        	& Alumna 	\\ \hline
 Orientador    & \supname	      & \pertesupname 	& Director del Trabajo Final \\ \hline
 \end{tabularx}
 \end{table}
@@ -130,7 +139,7 @@ Orientador    & \supname	      & \pertesupname 	& Director del Trabajo Final \\ 
 A continuación, se detallan las principales características y expectativas de cada uno de los interesados en el proyecto:
 
 \begin{itemize}
-    \item \textbf{Cliente (\clientename):} es un sector altamente regulado y riguroso. Valora por sobre todo la privacidad de los datos (arquitectura Zero-Trust) y el cumplimiento normativo (regulaciones de la SEC). Su principal expectativa es que el sistema reduzca drásticamente el tiempo invertido en tareas administrativas sin sacrificar la seguridad de la información confidencial de sus propios clientes.
+    \item \textbf{Cliente (\clientename):} valora por sobre todo la privacidad de los datos y el cumplimiento normativo (regulaciones de la SEC). Su principal expectativa es que el sistema reduzca drásticamente el tiempo invertido en tareas administrativas sin sacrificar la seguridad de la información confidencial de sus propios clientes.
     
     \item \textbf{Responsable (\authorname):} es la encargada de la investigación, el diseño de la arquitectura y el desarrollo integral del código (orquestación de agentes, configuración del motor RAG y bases de datos). Dado que este proyecto se realiza en paralelo con otras actividades profesionales, el desarrollo se planificará con una dedicación parcial estructurada y tendrá un enfoque de avance iterativo e incremental.
     
@@ -178,32 +187,83 @@ Para el desarrollo del presente proyecto se supone que:
 \section{6. Product backlog}
 \label{sec:backlog}
 
-El Product Backlog se ha organizado en cuatro épicas fundamentales que agrupan las funcionalidades clave del sistema multi-agente. 
+El Product Backlog se ha organizado en cuatro épicas fundamentales que agrupan las funcionalidades clave del sistema multi-agente[cite: 1950]. 
 
-La ponderación de las historias de usuario se realizó utilizando Story Points (SP) basados en la serie de Fibonacci (1, 2, 3, 5, 8, 13). El criterio para el cálculo de los SP consiste en asignar un valor del 1 al 5 a tres variables independientes: dificultad temporal (tiempo estimado de implementación), complejidad técnica (cantidad de dependencias del código) e incertidumbre (nivel de experiencia previa requerida). La suma aritmética de estas tres variables se aproxima al número superior más cercano dentro de la sucesión de Fibonacci para obtener el valor final asignado a la historia.
+La ponderación de las historias de usuario se realizó mediante el uso de Story Points (SP) basados en la serie de Fibonacci (1, 2, 3, 5, 8, 13). El criterio para el cálculo de los SP consiste en la asignación de un valor del 1 al 5 a tres variables independientes: dificultad temporal (tiempo estimado de implementación), complejidad técnica (cantidad de dependencias del código) e incertidumbre (nivel de experiencia previa requerida). El valor final asignado a la historia corresponde a la suma aritmética de estas tres variables.
 
-Las épicas y sus respectivas historias, incluyendo la justificación de sus prioridades, se detallan a continuación:
+Las épicas y sus respectivas historias, que incluyen la justificación de sus prioridades y el desglose de su estimación, se detallan a continuación:
 
 \begin{itemize}
   \item \textbf{\'{E}pica 1: generación y gestión de datos sintéticos}
     \begin{itemize}
-      \item HU1: como desarrollador, quiero generar un dataset sintético de clientes y portafolios para entrenar y validar el sistema sin comprometer datos reales confidenciales. Prioridad alta, ya que sin datos de prueba estructurados no es posible construir ni validar el resto de los módulos del sistema. 5 SP.
-      \item HU2: como desarrollador, quiero simular transcripciones de reuniones financieras con diferentes niveles de complejidad técnica para probar la robustez del agente de procesamiento de notas. Prioridad alta, porque representa la entrada de datos fundamental para iniciar el flujo de procesamiento de lenguaje natural. 3 SP.
+      \item HU1: como desarrollador, se requiere generar un dataset sintético de clientes y portafolios para entrenar y validar el sistema sin comprometer datos reales confidenciales. Prioridad alta, ya que sin datos de prueba estructurados no es posible construir ni validar el resto de los módulos del sistema. 
+        \begin{itemize}
+            \item Dificultad: 2
+            \item Complejidad: 2
+            \item Incertidumbre: 1
+            \item Story Point: 5
+        \end{itemize}
+      \item HU2: como desarrollador, se busca simular transcripciones de reuniones financieras con diferentes niveles de complejidad técnica para probar la robustez del agente de procesamiento de notas. Prioridad alta, porque representa la entrada de datos fundamental para iniciar el flujo de procesamiento de lenguaje natural.
+        \begin{itemize}
+            \item Dificultad: 1
+            \item Complejidad: 1
+            \item Incertidumbre: 1
+            \item Story Point: 3
+        \end{itemize}
     \end{itemize}
+
   \item \textbf{\'{E}pica 2: procesamiento y análisis de notas de reuniones}
     \begin{itemize}
-      \item HU3: como asesor financiero, quiero subir transcripciones de reuniones al sistema para que el agente extraiga automáticamente los puntos clave, entidades y recomendaciones. Prioridad alta, pues constituye el núcleo de la asistencia automatizada para reducir la carga administrativa. 8 SP.
-      \item HU4: como oficial de cumplimiento, quiero que el sistema analice las notas de las reuniones y aplique verificaciones normativas predefinidas para identificar posibles riesgos regulatorios. Prioridad media, porque aporta un gran valor de auditoría pero el sistema conversacional puede funcionar en su primera iteración sin estas reglas activadas. 5 SP.
+      \item HU3: como asesor financiero, se requiere subir transcripciones de reuniones al sistema para que el agente extraiga automáticamente los puntos clave, entidades y recomendaciones. Prioridad alta, pues constituye el núcleo de la asistencia automatizada para reducir la carga administrativa. 
+        \begin{itemize}
+            \item Dificultad: 3
+            \item Complejidad: 3
+            \item Incertidumbre: 2
+            \item Story Point: 8
+        \end{itemize}
+      \item HU4: como oficial de cumplimiento, se busca que el sistema analice las notas de las reuniones y aplique verificaciones normativas predefinidas para identificar posibles riesgos regulatorios. Prioridad media, porque aporta un gran valor de auditoría pero el sistema conversacional puede funcionar en su primera iteración sin estas reglas activadas.
+        \begin{itemize}
+            \item Dificultad: 2
+            \item Complejidad: 1
+            \item Incertidumbre: 2
+            \item Story Point: 5
+        \end{itemize}
     \end{itemize}
+
   \item \textbf{\'{E}pica 3: análisis automatizado de portafolios}
     \begin{itemize}
-      \item HU5: como asesor financiero, quiero cargar datos tabulares de un portafolio de inversión para obtener un reporte automatizado de métricas de riesgo y alocación de activos. Prioridad alta, ya que conforma la funcionalidad central y bloqueante del módulo de inversiones. 8 SP.
-      \item HU6: como asesor financiero, quiero que el agente compare el rendimiento del portafolio actual con benchmarks para fundamentar mis estrategias de inversión. Prioridad media, porque optimiza el análisis cualitativo pero no impide el cálculo de riesgo matemático básico. 5 SP.
+      \item HU5: como asesor financiero, se requiere cargar datos tabulares de un portafolio de inversión para obtener un reporte automatizado de métricas de riesgo y alocación de activos. Prioridad alta, ya que conforma la funcionalidad central y bloqueante del módulo de inversiones.
+        \begin{itemize}
+            \item Dificultad: 3
+            \item Complejidad: 3
+            \item Incertidumbre: 2
+            \item Story Point: 8
+        \end{itemize}
+      \item HU6: como asesor financiero, se busca que el agente compare el rendimiento del portafolio actual con benchmarks para fundamentar las estrategias de inversión. Prioridad media, porque optimiza el análisis cualitativo pero no impide el cálculo de riesgo matemático básico.
+        \begin{itemize}
+            \item Dificultad: 2
+            \item Complejidad: 2
+            \item Incertidumbre: 1
+            \item Story Point: 5
+        \end{itemize}
     \end{itemize}
+
   \item \textbf{\'{E}pica 4: interfaz conversacional y motor RAG}
     \begin{itemize}
-      \item HU7: como asesor financiero, quiero interactuar con un chatbot en lenguaje natural para realizar consultas rápidas y que el Agente Enrutador derive mi pedido al sub-agente correspondiente mediante Tool Calling. Prioridad alta, porque es la única interfaz de interacción habilitada para que el usuario final utilice el sistema. 8 SP.
-      \item HU8: como asesor financiero, quiero que el chatbot recupere información histórica de reuniones pasadas mediante búsqueda semántica (RAG) para preparar mis próximas interacciones con clientes. Prioridad alta, porque representa el mayor diferenciador tecnológico del sistema propuesto al dotar de memoria a largo plazo a la inteligencia artificial. 13 SP.
+      \item HU7: como asesor financiero, se requiere interactuar con un chatbot en lenguaje natural para realizar consultas rápidas y que el Agente Enrutador derive el pedido al sub-agente correspondiente mediante Tool Calling. Prioridad alta, porque es la única interfaz de interacción habilitada para que el usuario final utilice el sistema. 
+        \begin{itemize}
+            \item Dificultad: 3
+            \item Complejidad: 3
+            \item Incertidumbre: 2
+            \item Story Point: 8
+        \end{itemize}
+      \item HU8: como asesor financiero, se busca que el chatbot recupere información histórica de reuniones pasadas mediante búsqueda semántica (RAG) para preparar las próximas interacciones con clientes. Prioridad alta, porque representa el mayor diferenciador tecnológico del sistema propuesto al dotar de memoria a largo plazo a la inteligencia artificial.
+        \begin{itemize}
+            \item Dificultad: 5
+            \item Complejidad: 4
+            \item Incertidumbre: 4
+            \item Story Point: 13
+        \end{itemize}
     \end{itemize}
 \end{itemize}
 
@@ -327,7 +387,7 @@ HU8 & Desarrollar flujo de recuperación y generación (RAG) & 8 h & Alta \\ \hl
 
 La planificación del proyecto contempla un total estimado de 600 horas de trabajo. Se ha definido un esquema de 12 sprints de dos semanas de duración cada uno para garantizar un avance iterativo. De acuerdo con las metodologías ágiles, la velocidad del equipo se mide mediante la asignación de Story Points basada en la serie de Fibonacci. Las tareas técnicas requieren aproximadamente 40 a 45 horas por sprint, mientras que el tiempo restante se destina a investigación, pruebas, documentación y reuniones.
 
-\begin{table}[htpb]
+\begin{table}[!ht] % Se cambió a !ht para forzar la posición y evitar espacios grandes
 \centering
 \caption{Planificación de sprints y asignación de tareas}
 \begin{tabularx}{\linewidth}{@{}|l|l|X|c|l|c|@{}}
@@ -459,12 +519,14 @@ Riesgo 4 (Poca varianza en dataset sintético): se utilizarán múltiples modelo
 	\item Probabilidad de ocurrencia (O*): 3. El uso de diversos modelos asegura una alta variabilidad en la generación del texto.
   \end{itemize}
 
+\clearpage
+
 \section{14. Sprint review}
 \label{sec:sprint_review}
 
 La revisión de cada iteración exige garantizar la integración vertical del proyecto, y se establece una distinción clara entre la verificación técnica (cumplimiento de los requisitos internos) y la validación del producto (satisfacción de las expectativas del cliente).
 
-\begin{table}[htpb]
+\begin{table}[!ht]
 \renewcommand{\arraystretch}{1.5}
 \begin{tabular}{|>{\raggedright\arraybackslash}m{2cm}|
                 >{\raggedright\arraybackslash}m{3.5cm}|
@@ -486,12 +548,14 @@ HU8 & Configurar base vectorial y desarrollar flujo de generación aumentada. & 
 \end{tabular}
 \end{table}
 
+\clearpage
+
 \section{15. Sprint retrospective}    
 \label{sec:sprint_retro}
 
 Al finalizar un sprint, se realiza una reflexión sobre las prácticas implementadas para aplicar una mejora continua a la gestión del proyecto. A continuación se proyectan acciones organizadas bajo los cinco ejes de la Estrella de la Retrospectiva.
 
-\begin{table}[htpb]
+\begin{table}[!ht]
 \renewcommand{\arraystretch}{1.4}
 \begin{tabular}{|>{\raggedright\arraybackslash}p{1.8cm}|
                 >{\raggedright\arraybackslash}p{2.3cm}|
@@ -509,8 +573,9 @@ Sprint 9 (Técnico) & Ajustar experimentalmente los umbrales de similitud del mo
 \hline
 Sprint 10 (Técnico) & Interacciones fluidas con el cliente simulando casos límite. & Subestimar el tiempo requerido para el diseño de la interfaz web. & El enfoque asíncrono para prevenir el bloqueo del servidor. & Manejar los errores de la interfaz para informar claramente al usuario. & Probar la comunicación del frontend y backend en un único entorno. \\
 \hline
-Sprint 12 (No técnico) & Ensayos orales cronometrados para medir la duración de la presentación. & Modificar el alcance técnico a último momento. & La integración vertical entre los objetivos y las historias de usuario. & Grabar las exposiciones de práctica para observar el lenguaje corporal. & Agregar información nueva no documentada en el plan original. \\
+Sprint 12 (No técnico - por ej.: defensa) & Ensayos orales con feedback. & Cambiar contenidos en la memoria. & Material visual claro. & Dividir la presentación por bloques. & Agregar gráficos difíciles de explicar. \\
 \hline
 \end{tabular}
 \end{table}
+
 \end{document}

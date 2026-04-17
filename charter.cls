@@ -12,7 +12,7 @@
 \RequirePackage{etoolbox}
 \RequirePackage{xparse}
 
-\newbool{codirector}
+% \newbool{codirector}
 
 \ProvidesClass{charter}
 \DeclareOption*{\PassOptionsToPackage{\CurrentOption}{color}}%
@@ -30,7 +30,7 @@
 \def\ttitle{}
 \newcommand*{\director}[1]{\def\supname{#1}}
 \newcommand*{\pertenenciaDirector}[1]{\def\pertesupname{#1}}
-\newcommand*{\codirector}[1]{\def\cosupname{#1}}
+% \newcommand*{\codirector}[1]{\def\cosupname{#1}}
 \newcommand*{\pertenenciaCoDirector}[1]{\def\pertecosupname{#1}}
 \newcommand*{\cliente}[1]{\def\clientename{#1}}
 \newcommand*{\empresaCliente}[1]{\def\empclientename{#1}}
@@ -198,17 +198,17 @@
 	{\normalsize Director:\\}
 	{\Large \supname \hspace{1px} (\pertesupname) \\}
 
-\ifdefempty{\cosupname}
-  % codirector doesn't exist
-  {
-    \vspace{2pc}
-  }
-  % codirector exists
-  {
-    \vspace{10px}
-    \normalsize Codirector:\\
-    \Large \cosupname \hspace{1px} (\pertecosupname) \\
-  }
+% \ifdefempty{\cosupname}
+%   % codirector doesn't exist
+%   {
+%     \vspace{2pc}
+%   }
+%   % codirector exists
+%   {
+%     \vspace{10px}
+%     \normalsize Codirector:\\
+%     \Large \cosupname \hspace{1px} (\pertecosupname) \\
+%   }
 		
 	
     \vfill

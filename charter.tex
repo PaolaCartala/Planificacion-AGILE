@@ -12,7 +12,7 @@
 
 % Tu nombre, se puede usar el cualquier lugar del documento con el comando \authorname
 % IMPORTANTE: no omitir titulaciones ni tildación en los nombres, también se recomienda escribir los nombres completos (tal cual los tienen en su documento)
-\autor{Nailé Paola Cartalá}
+\autor{Lic. Nailé Paola Cartalá}
 
 % El nombre del director y co-director, se puede usar el cualquier lugar del documento con el comando \supname y \cosupname y \pertesupname y \pertecosupname
 \director{A Definir}
@@ -26,7 +26,7 @@
  
 \fechaINICIO{3 de marzo de 2026}		%Fecha de inicio de la cursada de GdP \fechaInicioName
 \fechaFINALPlan{21 de abril de 2026} 	%Fecha de final de cursada de GdP
-\fechaFINALTrabajo{25 de octubre de 2026}	%Fecha de defensa pública del trabajo final
+\fechaFINALTrabajo{octubre de 2026}	%Fecha de defensa pública del trabajo final
 
 \usepackage{float}
 \raggedbottom
@@ -77,7 +77,7 @@ Buenos Aires, \fechaInicioName
 
 \vspace{2cm}
 
-Por medio de la presente se acuerda con \authorname\hspace{1px} que su Trabajo Final de la \degreename\hspace{1px} se titulará ``\ttitle'' y consistirá en el desarrollo de un asistente virtual financiero seguro mediante una arquitectura multi-agente, modelos de lenguaje locales (open-weights) y generación aumentada por recuperación (RAG). El trabajo tendrá un presupuesto preliminar estimado de 600 horas, con fecha de inicio el \fechaInicioName\hspace{1px} y fecha de presentación pública el \fechaFinalName.
+Por medio de la presente se acuerda con \authorname\hspace{1px} que su Trabajo Final de la \degreename\hspace{1px} se titulará ``\ttitle'' y consistirá en el desarrollo de un asistente virtual financiero seguro mediante una arquitectura multi-agente, modelos de lenguaje locales (open-weights) y generación aumentada por recuperación (RAG). El trabajo tendrá un presupuesto preliminar estimado de 600 horas, con fecha de inicio el \fechaInicioName\hspace{1px} y fecha de presentación pública en \fechaFinalName.
 
 Se adjunta a esta acta la planificación inicial.
 
@@ -187,7 +187,7 @@ Para el desarrollo del presente proyecto se supone que:
 \section{6. Product backlog}
 \label{sec:backlog}
 
-El Product Backlog se ha organizado en cuatro épicas fundamentales que agrupan las funcionalidades clave del sistema multi-agente[cite: 1950]. 
+El Product Backlog se ha organizado en cuatro épicas fundamentales que agrupan las funcionalidades clave del sistema multi-agente. 
 
 La ponderación de las historias de usuario se realizó mediante el uso de Story Points (SP) basados en la serie de Fibonacci (1, 2, 3, 5, 8, 13). El criterio para el cálculo de los SP consiste en la asignación de un valor del 1 al 5 a tres variables independientes: dificultad temporal (tiempo estimado de implementación), complejidad técnica (cantidad de dependencias del código) e incertidumbre (nivel de experiencia previa requerida). El valor final asignado a la historia corresponde a la suma aritmética de estas tres variables.
 
@@ -432,17 +432,17 @@ El proyecto integra un análisis constante de la gobernanza de datos desde las f
 \subsection{Cumplimiento normativo}
 El sistema procesa información del sector financiero, por lo que el cumplimiento normativo es el eje central de su diseño. Se establece que:
 \begin{itemize}
-  \item la arquitectura Zero-Trust y el uso de modelos open-weights locales previenen la fuga de datos hacia servidores de terceros.
-  \item esta estrategia garantiza el cumplimiento de la Ley 25.326 de Protección de Datos Personales en Argentina y se alinea con los estándares de confidencialidad de la SEC para la gestión de información de identificación personal (PII).
-  \item los datos de entrenamiento y prueba se limitan a un dataset sintético autogenerado que anula cualquier riesgo de violar acuerdos de confidencialidad.
+  \item La arquitectura Zero-Trust y el uso de modelos open-weights locales previenen la fuga de datos hacia servidores de terceros.
+  \item Esta estrategia garantiza el cumplimiento de la Ley 25.326 de Protección de Datos Personales en Argentina y se alinea con los estándares de confidencialidad de la SEC para la gestión de información de identificación personal (PII).
+  \item Los datos de entrenamiento y prueba se limitan a un dataset sintético autogenerado que anula cualquier riesgo de violar acuerdos de confidencialidad.
 \end{itemize}
 
 \subsection{Ética en el uso de inteligencia artificial}
 El diseño del sistema asume la responsabilidad de mitigar posibles riesgos éticos derivados del uso de modelos generativos:
 \begin{itemize}
-  \item para evitar la manipulación o la desinformación financiera mediante alucinaciones del modelo, el sistema se restringe a responder únicamente sobre el contexto recuperado por el motor RAG.
-  \item se implementan registros de auditoría obligatorios para garantizar la trazabilidad de cada decisión algorítmica.
-  \item se requiere una validación cualitativa constante por parte del asesor humano (experto del dominio) antes de compartir cualquier reporte con el cliente final.
+  \item Para evitar la manipulación o la desinformación financiera mediante alucinaciones del modelo, el sistema se restringe a responder únicamente sobre el contexto recuperado por el motor RAG.
+  \item Se implementan registros de auditoría obligatorios para garantizar la trazabilidad de cada decisión algorítmica.
+  \item Se requiere una validación cualitativa constante por parte del asesor humano (experto del dominio) antes de compartir cualquier reporte con el cliente final.
 \end{itemize}
 
 
